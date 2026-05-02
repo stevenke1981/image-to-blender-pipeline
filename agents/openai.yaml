@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image to Blender Pipeline"
+  short_description: "Generate images, convert to 3D, finish in Blender"
+  default_prompt: "Use $image-to-blender-pipeline to generate a concept image, convert it to a 3D asset, and prepare it in Blender."
