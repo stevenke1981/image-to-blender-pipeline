@@ -1,4 +1,4 @@
 interface:
   display_name: "Image to Blender Pipeline"
-  short_description: "Generate images, convert to 3D, finish in Blender"
-  default_prompt: "Use $image-to-blender-pipeline to generate a concept image, convert it to a 3D asset, and prepare it in Blender."
+  short_description: "Text to Image 2 to 3D to Blender assets"
+  default_prompt: "Use $image-to-blender-pipeline to turn my text description into a built-in ChatGPT Image 2 image, image-to-3D asset, and Blender model preview."
