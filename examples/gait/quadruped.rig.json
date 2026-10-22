@@ -1,0 +1,98 @@
+{
+  "armature": "GaitRig",
+  "pelvis": "pelvis",
+  "limbs": {
+    "hind_left": {
+      "upper": "hind_left.upper",
+      "lower": "hind_left.lower",
+      "foot": "hind_left.foot",
+      "sole_offset": [
+        0,
+        0,
+        0
+      ],
+      "ground_probes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0.14,
+          0
+        ]
+      ],
+      "bend_sign": 1
+    },
+    "front_left": {
+      "upper": "front_left.upper",
+      "lower": "front_left.lower",
+      "foot": "front_left.foot",
+      "sole_offset": [
+        0,
+        0,
+        0
+      ],
+      "ground_probes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0.14,
+          0
+        ]
+      ],
+      "bend_sign": -1
+    },
+    "hind_right": {
+      "upper": "hind_right.upper",
+      "lower": "hind_right.lower",
+      "foot": "hind_right.foot",
+      "sole_offset": [
+        0,
+        0,
+        0
+      ],
+      "ground_probes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0.14,
+          0
+        ]
+      ],
+      "bend_sign": 1
+    },
+    "front_right": {
+      "upper": "front_right.upper",
+      "lower": "front_right.lower",
+      "foot": "front_right.foot",
+      "sole_offset": [
+        0,
+        0,
+        0
+      ],
+      "ground_probes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0.14,
+          0
+        ]
+      ],
+      "bend_sign": -1
+    }
+  }
+}

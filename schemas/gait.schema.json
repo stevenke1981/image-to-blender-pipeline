@@ -1,0 +1,271 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "biped",
+        "quadruped",
+        "serpentine"
+      ]
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "age_years": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1000
+        },
+        "maturity_years": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1000
+        },
+        "state": {
+          "enum": [
+            "neutral",
+            "tired",
+            "energetic"
+          ]
+        }
+      },
+      "required": [
+        "age_years",
+        "maturity_years",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "body": {
+      "type": "object",
+      "properties": {
+        "leg_length_m": {
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 10
+        },
+        "body_length_m": {
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 20
+        },
+        "hip_width_m": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 10
+        },
+        "upper_leg_ratio": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 0.8
+        }
+      },
+      "required": [
+        "leg_length_m",
+        "body_length_m",
+        "hip_width_m",
+        "upper_leg_ratio"
+      ],
+      "additionalProperties": false
+    },
+    "fps": {
+      "type": "integer",
+      "minimum": 12,
+      "maximum": 120
+    },
+    "cycle_s": {
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 10
+    },
+    "speed_mps": {
+      "type": "number",
+      "minimum": 0.001,
+      "maximum": 20
+    },
+    "stride_m": {
+      "type": "number",
+      "minimum": 0.001,
+      "maximum": 20
+    },
+    "step_length_m": {
+      "type": "number",
+      "minimum": 0.0005,
+      "maximum": 10
+    },
+    "cadence_steps_per_s": {
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 20
+    },
+    "stance_fraction": {
+      "type": "number",
+      "minimum": 0.5,
+      "maximum": 0.85
+    },
+    "foot_clearance_m": {
+      "type": "number",
+      "minimum": 0.001,
+      "maximum": 1
+    },
+    "pelvis_rotation_rad": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": -0.25,
+        "maximum": 0.25
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "com_displacement_m": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 0.2
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "phase_offsets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "left": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.999999
+        },
+        "right": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.999999
+        },
+        "hind_left": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.999999
+        },
+        "hind_right": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.999999
+        },
+        "front_left": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.999999
+        },
+        "front_right": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.999999
+        }
+      }
+    },
+    "joint_limits_rad": {
+      "type": "object",
+      "properties": {
+        "hip": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -3.141593,
+            "maximum": 3.141593
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "knee": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -3.141593,
+            "maximum": 3.141593
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "ankle": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -3.141593,
+            "maximum": 3.141593
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "hip",
+        "knee",
+        "ankle"
+      ],
+      "additionalProperties": false
+    },
+    "snake_wave": {
+      "type": "object",
+      "properties": {
+        "amplitude_m": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "wavelength_m": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 20
+        },
+        "frequency_hz": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 10
+        }
+      },
+      "required": [
+        "amplitude_m",
+        "wavelength_m",
+        "frequency_hz"
+      ],
+      "additionalProperties": false
+    },
+    "stance_duration_s": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 10
+    }
+  },
+  "required": [
+    "schema_version",
+    "name",
+    "type",
+    "profile",
+    "body",
+    "fps",
+    "cycle_s",
+    "speed_mps",
+    "stride_m",
+    "step_length_m",
+    "cadence_steps_per_s",
+    "stance_fraction",
+    "foot_clearance_m",
+    "pelvis_rotation_rad",
+    "com_displacement_m",
+    "phase_offsets",
+    "joint_limits_rad",
+    "snake_wave",
+    "stance_duration_s"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reusable artistic gait v1.0",
+  "description": "Metres, seconds, radians. +Y forward/+Z up. stride=two alternating steps. snake reserved; runtime rejects it. Joint angles are solved, limited by joint_limits_rad. Age uses species-relative maturity; heuristics only."
+}
