@@ -1,0 +1,10 @@
+{
+  "max_contact_drift_m": 1.6653345369377348e-16,
+  "max_stance_slide_per_sample_m": 1.6653345369377348e-16,
+  "max_ground_penetration_m": 0.0,
+  "loop_position_error_m": 0.0,
+  "loop_velocity_error_mps": 0.06046633179885357,
+  "passed": true,
+  "source": "mathematical trajectory only",
+  "blender_status": "NOT_RUN"
+}

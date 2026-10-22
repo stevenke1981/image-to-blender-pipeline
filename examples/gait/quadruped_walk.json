@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "name": "quadruped_walk",
+  "type": "quadruped",
+  "profile": {
+    "age_years": 4,
+    "maturity_years": 2,
+    "state": "neutral"
+  },
+  "body": {
+    "leg_length_m": 0.65,
+    "body_length_m": 1.0,
+    "hip_width_m": 0.3,
+    "upper_leg_ratio": 0.5
+  },
+  "fps": 30,
+  "cycle_s": 0.8333333333333334,
+  "speed_mps": 0.5,
+  "stride_m": 0.4166666666666667,
+  "step_length_m": 0.20833333333333334,
+  "cadence_steps_per_s": 2.4,
+  "stance_fraction": 0.6,
+  "foot_clearance_m": 0.052000000000000005,
+  "pelvis_rotation_rad": [
+    0.015,
+    0.025,
+    0.035
+  ],
+  "com_displacement_m": [
+    0.012,
+    0.0,
+    0.005200000000000001
+  ],
+  "phase_offsets": {
+    "hind_left": 0.0,
+    "front_left": 0.25,
+    "hind_right": 0.5,
+    "front_right": 0.75
+  },
+  "joint_limits_rad": {
+    "hip": [
+      -1.5,
+      1.5
+    ],
+    "knee": [
+      0.0,
+      2.6
+    ],
+    "ankle": [
+      -1.5,
+      1.5
+    ]
+  },
+  "snake_wave": {
+    "amplitude_m": 0.1,
+    "wavelength_m": 1.0,
+    "frequency_hz": 1.0
+  },
+  "stance_duration_s": 0.5
+}

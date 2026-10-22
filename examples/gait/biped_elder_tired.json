@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "name": "biped_elder_tired",
+  "type": "biped",
+  "profile": {
+    "age_years": 75,
+    "maturity_years": 18.0,
+    "state": "tired"
+  },
+  "body": {
+    "leg_length_m": 0.9,
+    "body_length_m": 0.8,
+    "hip_width_m": 0.3,
+    "upper_leg_ratio": 0.5
+  },
+  "fps": 30,
+  "cycle_s": 1.0,
+  "speed_mps": 0.35,
+  "stride_m": 0.35,
+  "step_length_m": 0.175,
+  "cadence_steps_per_s": 2.0,
+  "stance_fraction": 0.66,
+  "foot_clearance_m": 0.0405,
+  "pelvis_rotation_rad": [
+    0.015,
+    0.025,
+    0.035
+  ],
+  "com_displacement_m": [
+    0.012,
+    0.0,
+    0.007200000000000001
+  ],
+  "phase_offsets": {
+    "left": 0.0,
+    "right": 0.5
+  },
+  "joint_limits_rad": {
+    "hip": [
+      -1.5,
+      1.5
+    ],
+    "knee": [
+      0.0,
+      2.6
+    ],
+    "ankle": [
+      -1.5,
+      1.5
+    ]
+  },
+  "snake_wave": {
+    "amplitude_m": 0.1,
+    "wavelength_m": 1.0,
+    "frequency_hz": 1.0
+  },
+  "stance_duration_s": 0.66
+}

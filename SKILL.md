@@ -5,6 +5,10 @@ description: "Execute an end-to-end text-description to Blender asset pipeline u
 
 # Image To Blender Pipeline
 
+## Animation-Only Routing
+
+For walking or gait work on existing prepared rigs, skip source-image generation and image-to-3D stages. Read [gait-animation.md](references/gait-animation.md), validate `schemas/gait.schema.json`, and run the scripts under `scripts/`. Preserve the original asset pipeline below for new model creation. Do not treat raw image-to-3D meshes as rigged assets.
+
 ## Workflow
 
 Use a four-stage asset-production pipeline. Do not skip Stage 1: this skill requires generating or regenerating the source image with the built-in ChatGPT Image 2 image-generation capability before conversion.
@@ -192,6 +196,12 @@ for obj in bpy.context.scene.objects:
         bpy.ops.mesh.customdata_custom_splitnormals_clear()
         obj.select_set(False)
 ```
+
+## Stage 4: Optional Procedural Gait
+
+After retopology, rigging, and weights are prepared, use `scripts/gait_cli.py` to generate an editable age/proportion/speed/state profile. Use `scripts/check_blender_gaits.py` to create and check three test Actions and previews, or `scripts/blender_gait.py` with a rig mapping to animate a prepared character copy. Follow [gait-animation.md](references/gait-animation.md) for units, mapping, output files, and acceptance checks. Reserve serpentine motion as unsupported in v0.1.0; do not silently substitute a legged walk.
+
+Report Python trajectory validation separately from native Blender validation. Require actual Blender execution and evaluated-pose checks before marking animation PASS. If Blender is absent, deliver scripts, configs, mathematical previews, and a NOT_RUN list; do not invent Actions or rendered previews.
 
 ## Quality Gate
 
